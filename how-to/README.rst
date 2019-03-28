@@ -3,53 +3,48 @@ How do I ...
 
 .. contents::
 
-... start a new Rails app?
+... start a new web application?
 --------------------------
 
-Use suspenders_:
+Use simple-react-koa-full-stack_:
 
 .. code:: sh
 
-  $ gem install suspenders
-  $ suspenders the-name-of-your-project-here
-  $ cd the-name-of-your-project-here/
-  $ bin/setup
-  $ rake
+  $ git clone https://github.com/toptive/simple-react-koa-full-stack
+  $ cd simple-react-koa-full-stack
+  $ yarn (or npm install)
+  $ yarn dev (or npm run dev)
 
-.. _suspenders: https://github.com/thoughtbot/suspenders
+.. _simple-react-koa-full-stack: https://github.com/toptive/simple-react-koa-full-stack
 
-... feature-test a Rails app's Javascript?
-------------------------------------------
+... start a new cordova application?
+--------------------------
 
-Use capybara-webkit_. In your ``Gemfile``:
+Use react-cordova-boilerplate_:
 
-.. code:: ruby
+.. code:: sh
 
-  gem "capybara-webkit"
+    $ git clone https://github.com/toptive/react-cordova-boilerplate.git
+    $ cd react-cordova-boilerplate
+    $ npm install (or yarn install)
+    $ npm start (or yarn start)
 
-In ``spec/support/capybara_webkit.rb`` (for Rspec):
+    $ npm install -g cordova
+    $ cordova platform add android (or ios)
+    $ npm run build:android (or build:ios)
 
-.. code:: ruby
+.. _react-cordova-boilerplate: https://github.com/toptive/react-cordova-boilerplate
 
-  Capybara.javascript_driver = :webkit
-  
-  Capybara::Webkit.configure do |config|
-    config.block_unknown_urls
-  end
 
-When writing a spec, you must set the ``:js`` flag for that test to make use of
-capybara-webkit. For example, in ``spec/features/user_signs_in_spec.rb``:
+... start a new python project?
+--------------------------
 
-.. code:: ruby
+Use generator-toptive-python_:
 
-  feature "Authentication", :js do
-    scenario "A user signing in" do
-      create(:user, email: "me@example.com", password: "sekrit")
-  
-      sign_in_as email: "me@example.com", password: "sekrit"
-  
-      expect(page).to have_text("Welcome!")
-    end
-  end
+.. code:: sh
 
-.. _capybara-webkit: https://github.com/thoughtbot/capybara-webkit
+  $ npm install -g yo
+  $ npm install -g generator-toptive-python
+  $ yo toptive-python
+
+.. _generator-toptive-python: https://github.com/toptive/generator-toptive-python
