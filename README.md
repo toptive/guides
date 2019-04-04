@@ -1,8 +1,6 @@
 Guides
 ======
 
-[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
-
 Guides for getting things done, programming well, and programming in style.
 
 * [Best Practices](./best-practices)
@@ -46,11 +44,7 @@ waiting a week for everybody to leave feedback**.
 Credits
 -------
 
-Thank you, [contributors](https://github.com/thoughtbot/guides/graphs/contributors)!
-
-![thoughtbot](http://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg)
-
-Guides is maintained by [thoughtbot, inc](https://thoughtbot.com).
+Forked from the awesome guides at [thoughtbot, inc](https://github.com/thoughtbot/guides).
 
 License
 -------

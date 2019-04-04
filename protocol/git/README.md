@@ -12,8 +12,11 @@ Maintain a Repo
 * Perform work in a feature branch.
 * Rebase frequently to incorporate upstream changes.
 * Use a [pull request] for code reviews.
+* Follow [git branching flow]
 
 [pull request]: https://help.github.com/articles/using-pull-requests/
+[git branching flow]: https://nvie.com/posts/a-successful-git-branching-model/
+
 
 Write a Feature
 ---------------
@@ -68,8 +71,7 @@ Review Code
 -----------
 
 A team member other than the author reviews the pull request. They follow
-[Code Review](/code-review) guidelines to avoid
-miscommunication.
+[Code Review](/code-review) guidelines to avoid miscommunication.
 
 They make comments and ask questions directly on lines of code in the GitHub
 web interface or in the project's chat room.

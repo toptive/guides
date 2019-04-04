@@ -8,11 +8,18 @@ General
 
 * These are not to be blindly followed; strive to understand these and ask
   when in doubt.
+* Anybody can fix anything.
 * Don't duplicate the functionality of a built-in library.
 * Don't swallow exceptions or "fail silently."
 * Don't write code that guesses at future functionality.
+* [Don't Live with Broken Windows]
 * Exceptions should be exceptional.
-* Keep the code simple.
+* [Keep the code simple]. Remember [KISS principle]
+* Code shall be removed rather than commented out.
+
+[Don't Live with Broken Windows]: https://www.artima.com/intv/fixit2.html
+[Keep the code simple]: https://www.readability.com/index.html
+[KISS principle]: https://www.interaction-design.org/literature/article/kiss-keep-it-simple-stupid-a-design-principle
 
 Object-Oriented Design
 ----------------------
@@ -26,8 +33,10 @@ Object-Oriented Design
 * Prefer small classes with a single, well-defined responsibility. When a
   class exceeds 100 lines, it may be doing too many things.
 * [Tell, don't ask].
+* Remember [SOLID] principles from the Uncle Bob
 
 [Tell, don't ask]: https://robots.thoughtbot.com/tell-dont-ask
+[SOLID]: http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod
 
 Ruby
 ----
@@ -105,8 +114,8 @@ Rails
 [prevent tampering]: http://blog.bigbinary.com/2013/03/19/cookies-on-rails.html
 [class constant in association]: https://github.com/thoughtbot/guides/blob/master/style/rails/sample.rb
 
-Testing
--------
+General Testing
+---------------
 
 * Avoid `any_instance` in rspec-mocks and mocha. Prefer [dependency injection].
 * Avoid `its`, `specify`, and `before` in RSpec.
@@ -117,7 +126,6 @@ Testing
 * Avoid using instance variables in tests.
 * Disable real HTTP requests to external services with
   `WebMock.disable_net_connect!`.
-* Don't test private methods.
 * Test background jobs with a [`Delayed::Job` matcher].
 * Use [stubs and spies] \(not mocks\) in isolated tests.
 * Use a single level of abstraction within scenarios.
@@ -127,6 +135,10 @@ Testing
 * Use a [Fake] to stub requests to external services.
 * Use integration tests to execute the entire app.
 * Use non-[SUT] methods in expectations when possible.
+* Test ruthlessly
+* Strive for 100% code coverage, but don't get obsess over the coverage score.
+* Focus on one tiny bit of functionality.
+* Should be fast, but a slow test is better than no test.
 
 [dependency injection]: http://en.wikipedia.org/wiki/Dependency_injection
 [subject-example]: ../style/testing/unit_test_spec.rb
@@ -374,3 +386,16 @@ Ruby JSON APIs
 [oj]: https://github.com/ohler55/oj
 [feature specs]: https://www.relishapp.com/rspec/rspec-rails/docs/feature-specs/feature-spec
 [request specs]: https://www.relishapp.com/rspec/rspec-rails/docs/request-specs/request-spec
+
+Python
+------
+* The Zen of Python – a nice easter egg
+* Follow [PEP 8]
+* Prefer python 3 instead of [python 2]
+* Use docstring and   doctest
+* Avoid using `from module import *`
+* Prefer `generators` and `context managers` when it possible
+* Line breaks and indentations matters
+
+[python 2]: https://pythonclock.org/
+[PEP 8]: https://www.python.org/dev/peps/pep-0008/
